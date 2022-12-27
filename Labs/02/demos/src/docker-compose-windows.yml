@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  batch:
+    image: sixeyed/prometheus-demo-batch:windows
+    build:
+      context: .
+      dockerfile: ./docker/batch/Dockerfile
+      args:
+        SDK_TAG: 3.1.300-nanoserver-1809
+        RUNTIME_TAG: 3.1.4-nanoserver-1809
+
+  web:
+    image: sixeyed/prometheus-demo-web:windows
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+      args:
+        SDK_TAG: 3.1.300-nanoserver-1809
+        RUNTIME_TAG: 3.1.4-nanoserver-1809

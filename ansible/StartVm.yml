@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+
+  - name: copying promuthus files
+    become: true 
+    copy:
+      src: /mnt/d/Created_by_me/Promuthus/Labs/03/demos/demo1/prometheus.yml
+      dest: /Read-it/deployment
+

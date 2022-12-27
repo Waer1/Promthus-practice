@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  batch:
+    image: sixeyed/prometheus-demo-batch:linux
+    build:
+      context: .
+      dockerfile: ./docker/batch/Dockerfile
+
+  web:
+    image: sixeyed/prometheus-demo-web:linux
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile

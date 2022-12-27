@@ -1,0 +1,3 @@
+*.tar.gz
+data/
+prometheus-2.18.1.windows-amd64/

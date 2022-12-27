@@ -1,0 +1,16 @@
+[
+    {
+      "targets": [ "ps-prom-win2019:9182" ],
+      "labels": {
+        "os": "windows",
+        "runtime": "vm"
+      }
+    },
+    {
+      "targets": [ "ps-prom-win2019:8080" ],
+      "labels": {
+        "os": "windows",
+        "runtime": "docker"
+      }
+    }
+]

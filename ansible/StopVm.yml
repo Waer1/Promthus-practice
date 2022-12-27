@@ -1,0 +1,15 @@
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+
+  # - name: copy jenkins Data To local
+  #   fetch:
+  #    src: /Read-it/mongoData/
+  #    dest: /mnt/d/Created_by_me/SW_Reops/Read-it/
+  
+  - name: copy jenkins Data To local
+    fetch:
+     src: /var/jenkins_home
+     dest: /mnt/d/Created_by_me/SW_Reops/Read-it/
+  

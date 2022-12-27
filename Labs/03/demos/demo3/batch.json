@@ -1,0 +1,16 @@
+[
+    {
+      "targets": [ "ps-prom-ub1804:9100" ],
+      "labels": {
+        "os": "linux",
+        "runtime": "vm"
+      }
+    },
+    {
+      "targets": [ "ps-prom-ub1804:8080" ],
+      "labels": {
+        "os": "linux",
+        "runtime": "container"
+      }
+    }
+]

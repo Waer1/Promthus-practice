@@ -1,0 +1,35 @@
+global:
+  scrape_interval:     15s 
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+    - targets: ['localhost:9090']  
+  
+  - job_name: 'linux'
+    static_configs:
+      - targets: ['ps-prom-ub1804:9100']
+        labels:
+          os: linux
+          runtime: vm
+      
+  - job_name: 'batch'
+    static_configs:
+      - targets: ['ps-prom-ub1804:8080']
+        labels:
+          os: linux
+          runtime: container
+
+  - job_name: 'windows'
+    static_configs:
+      - targets: ['ps-prom-win2019:9182']
+        labels:
+          os: windows
+          runtime: vm
+
+  - job_name: 'web'
+    static_configs:
+      - targets: ['ps-prom-win2019:8080']
+        labels:
+          os: windows
+          runtime: docker
